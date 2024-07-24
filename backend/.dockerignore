@@ -1,0 +1,31 @@
+# Node modules can be installed inside the container, so they are not needed in the build context.
+node_modules
+npm-debug.log
+
+# Build directories which should be created during the build process, not included in the context.
+dist
+build
+
+# Environment files which might contain sensitive information.
+.env
+.env.*
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+
+# Git directory and related files
+.git
+.gitignore
+
+# Dockerfile and Docker Compose files, if you don't want to include them in the image
+Dockerfile
+docker-compose.yml
+
+# OS and IDE-specific files
+.DS_Store
+.vscode
+.idea
+*.sublime-workspace
+*.sublime-project

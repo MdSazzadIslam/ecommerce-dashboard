@@ -1,0 +1,47 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: api
+    restart: on-failure:10
+    environment:
+      PORT: ${PORT}
+      DB_URL: mongodb://mongo:27017/salesDashboard
+      CLIENT_ORIGIN: ${CLIENT_ORIGIN}
+    volumes:
+      - ./src:/usr/app/
+      - /usr/app/node_modules
+    ports:
+      - ${PORT}:${PORT}
+    depends_on:
+      - mongo
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.2'
+          memory: 512M
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+volumes:
+  mongo_data:
