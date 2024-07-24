@@ -47,7 +47,6 @@ Jest: Testing framework for ensuring code quality and functionality.
 
 ### Backend
 
-### Running the application   
 
 ###  Environment variable
 Ensure the following environment variables are set:
@@ -63,7 +62,7 @@ If you are running the application without Docker, make sure that MongoDB is ins
 ```
 mongod
 ```
-# scripts
+### scripts
 1. Seed the Database
 ```
 npm run seed
@@ -78,7 +77,7 @@ npm run dev
 npm run test
 ```
 
-# Deployment 
+### Deployment 
 To deploy the application using Docker, which will automatically seed the data and run the application:
 ```
 docker-compose up -d
@@ -95,7 +94,7 @@ REACT_APP_API_URL=http://localhost:8000/graphql
 ### Running locally
 If you are running the application without Docker
 
-# scripts
+### scripts
 1. Start the Application in Development Mode
 ```
 npm start
@@ -106,7 +105,7 @@ npm start
 npm test
 ```
 
-# Deployment 
+### Deployment 
 To deploy the application using Docker, which will automatically run the application:
 ```
 docker-compose up -d
