@@ -110,3 +110,6 @@ To deploy the application using Docker, which will automatically run the applica
 ```
 docker-compose up -d
 ```
+
+
+Don't forget to give this repo a ⭐ if you like and want to appreciate my efforts
