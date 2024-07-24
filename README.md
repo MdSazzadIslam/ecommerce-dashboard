@@ -1,46 +1,69 @@
-# Getting Started with Create React App
+# E-commerce Dashboard Solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project Description
 
-## Available Scripts
+The goal is to develop a dashboard for the sales and marketing department to display various Key Performance Indicators (KPIs) related to product sales. The dashboard should be visually appealing and suitable for presentation to the management team. Key features include:
 
-In the project directory, you can run:
+### Charts:
+- Sales Trend Over Time:
+    - Line graph showcasing sales trends over specific periods (daily, monthly, quarterly, annually) to understand growth trends and seasonal changes.
 
-### `npm start`
+- Sales by Region:
+    - Geographic heat map visualizing sales performance across different regions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Sales by Category:
+    - Pie chart or bar graph illustrating sales distribution across various product categories.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Top Selling Products:
+    - Horizontal bar graph displaying the top 10 (or a chosen number) best-selling products.
 
-### `npm test`
+- Sales vs. Target:
+    - Bar graph with actual sales and target sales for each product/category.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+- Customer Demographics:
+    - Graphs breaking down sales by customer demographics such as age, gender, occupation, etc.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Revenue and Profit Analysis:
+    - Line graphs or bar graphs showing revenue, costs, and profit over time.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Sales Conversion Rate:
+    - Percentage of site visitors or leads that convert into sales, depicted over time or across marketing channels.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tech stacks
+This project utilizes the following technologies:
+```
+Node.js: JavaScript runtime
+TypeScript: Static type-checking
+Apollo Client: GraphQL client for querying data.
+React: Front-end library for building user interfaces.
+Jest: Testing framework for ensuring code quality and functionality.
+```
 
-### `npm run eject`
+### Running the application   
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+###  Environment variable
+Ensure the following environment variables are set:
+```
+PORT=3000
+REACT_APP_API_URL=http://localhost:8000/graphql
+```
+### Running locally
+If you are running the application without Docker
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# scripts
+1. Start the Application in Development Mode
+```
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Run Unit Tests
+```
+npm test
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Deployment 
+To deploy the application using Docker, which will automatically run the application:
+```
+docker-compose up -d
+```
